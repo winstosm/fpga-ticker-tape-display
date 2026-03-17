@@ -1,50 +1,63 @@
-# A gitignore for Altera Quartus II that tries to ignore almost all of the
-# automatically Quartus-generated files. This primarily leaves the project,
-# settings, source, and constraint files to be added. The files ignored do not
-# include the bulk of the MegaFunction Wizard generated files which enables
-# a cloned repository to be used (usually) immediately without regenerating
-# Altera IP blocks.
+# =========================
+# Quartus Prime generated folders
+# =========================
+db/
+incremental_db/
+output_files/
+greybox_tmp/
 
-# Need to keep all HDL files and timing constraint files
-# *.vhd
-# *.v
-# *.sdc
-
-# ignore Quartus II generated folders
-*_sim
-db
-greybox_tmp
-incremental_db
-simulation
-testbench
-timing
-
-# ignore Quartus II generated files
-*_generation_script*
-*_inst.vhd
-*.bak
-*.cmp
-*.done
-*.eqn
-*.hex
-*.html
+# =========================
+# Quartus generated files
+# =========================
+*.qws
+*.qws.bak
+*.qpf.bak
+*.qsf.bak
+*.rpt
+*.summary
+*.smsg
 *.jdi
-*.jpg
-*.mif
+*.done
+*.cmp
+*.eqn
 *.pin
-*.pof
-*.ptf.*
 *.qar
 *.qarlog
-*.qws
-*.rpt
-*.smsg
 *.sof
-*.sopc_builder
-*.summary
-*.tcl
-*.txt # Explicitly add any text files used
-*~
-*example*
-*sopc_*
-PLLJ_PLLSPE_INFO.txt # The generated PLL specification file
+*.pof
+
+# =========================
+# Simulation (ModelSim / Questa)
+# =========================
+transcript
+vsim.wlf
+work/
+*.wlf
+*.vcd
+*.log
+
+# =========================
+# Temporary / Backup files
+# =========================
+*.tmp
+*.bak
+*.swp
+*.~*
+*.orig
+
+# =========================
+# OS-generated files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IMPORTANT: Keep your actual work
+# =========================
+!src/
+!testbench/
+!docs/
+!*.vhd
+!*.v
+!*.sdc
+!*.txt
